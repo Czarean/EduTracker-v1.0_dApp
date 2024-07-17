@@ -1,59 +1,116 @@
-# `EduTrack_v1`
+# `EduTracker v0.1` School Management dApp  
+Development project for graduation and certification of ICP HUB Mexico June-July 2024!  
+  
+## Description of the EduTracker v0.1 dApp:  
+`EduTracker` is a comprehensive application designed in the `Motoko` programming language developed by `DFinity` for the `Internet Computer ICP Blockchain`. EduTracker Pro is designed to manage Schools student and teacher information, monitor student academic progress, and automate administrative processes, optimizing educators' time and effort.  
 
-Welcome to your new `EduTrack_v1` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+`Note: This might not be the best, more efficient or optimal code to accomplish this, but this certainly does the job, I did what I could with the lil knowledge I have gathered this past few weeks, So if you have any advise or feedback please let me know, I would appreciate it a lot, Thanks.`
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+  
+## Methods and Functions Used in the Current Motoko Code:  
+  
+**Add Students**    
+- Creation of HashMap: `Students.Hashmap`  
+- `Students.put` HashMap: Adds students to the HashMap  
+  
+**Delete Students**    
+- `Students.delete(delete)`  
+- `Switch/Case` Used to check if the teacher's name input exists or not! If it doesn't exist, it returns a message; if it does, it deletes it.  
 
-To learn more before you start working with `EduTrack_v1`, see the following documentation available online:
+**Add Teachers**    
+- `if/else:` Conditions for error/result deployment  
+- `result:` error deployment when not all fields are filled  
+- Creation of HashMap: `Professors.Hashmap`  
+- `Professors.put` HashMap  
+  
+**Delete Teachers**    
+- `Professors.delete(delete)`  
+- Uses `Switch/Case` to check if the teacher's name input exists or not! If it doesn't exist, it returns a message; if it does, it deletes it.  
+  
+**Other Functions and Methods Used:**    
+- `Types:` Students, Years, Months, Weeks, Days, Tracker, Subjects, Scores  
+- `Nested Types:` Types containing elements within other Types with other elements.  
+- `Concatenation` in the response message.  
+- `await` Allows us to wait for an asynchronous message to respond before continuing the code.  
+- `and & not` used to ensure no field is left blank when adding a new Teacher to the database.  
+- `Module:` Moves all Types to a new module folder and adds Public to the variables; in the main.mo, Types are imported and modified as MyTypes.students.  
+  
+----------------------------------------------------  
+Developer: Cesar Anaya    
+[Twitter](https://x.com/IC_Pirate)    
+[GitHub](https://github.com/Czarean)    
+czardcryptopirate@gmail.com    
+Discord: crypto_pirate.  
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
+I am a Junior Motoko developer. Motoko is my first language, and if you wish to help or advise me on the code, I would be very grateful and excited to collaborate and learn from other Motoko and Frontend developers. You can contact me via email, or private message on my X (Twitter) account, or Discord.
 
-If you want to start working on your project right away, you might want to try the following commands:
+______________________________________________________________________________________________________________________________________________
 
-```bash
-cd EduTrack_v1/
-dfx help
-dfx canister --help
-```
+## -------My Vision for the Fully Completed EduTracker Pro------
 
-## Running the project locally
+## EduTracker Pro and its Main Features    
+**Student and Teacher Information Management:**    
+- `Database:` Stores detailed information about students and teachers, including personal data, academic history, and contacts.  
+- `Personalized Profile:` Each student and teacher has a personalized profile with relevant and updated information.  
+  
+**Student Progress Tracking:**    
+- `Grades Record:` Allows teachers to easily enter and update grades.  
+- `Progress Report:` Generates detailed reports on each student's academic performance.  
+- `Alerts and Notifications:` Sends automatic alerts to students and parents about academic performance and areas needing attention.  
+  
+**Automation of Administrative Processes:**    
+- `Report Generation:` Instantly creates administrative and academic reports.  
+  
+**Intuitive and User-Friendly Interface:**    
+- `Interactive Dashboard:` An easy-to-use control panel providing an overview of the current state of the school.  
+- `Mobile Access via Web Browser:` Compatible with mobile devices so that students and teachers can access information from anywhere.  
+  
+**Security and Privacy:**    
+- `Data Protection:` Uses encryption and robust security measures to protect the personal information of students and teachers.  
+- `Controlled Access:` Allows setting specific access permissions for different users, ensuring only authorized personnel can access sensitive information.  
+  
+**Benefits:**    
+- `Administrative Efficiency:` Significantly reduces the time spent on administrative tasks, allowing teachers to focus more on teaching.  
+- `Improved Academic Performance:` Facilitates personalized tracking and support for each student, promoting better academic performance.  
+- `Effective Communication:` Enhances communication between teachers, students, and parents through automated notifications and reports.  
+- `Quick Access to Information:` Provides instant access to academic and administrative information, improving decision-making.  
+  
+EduTracker Pro is the ideal solution for any educational institution that wants to modernize and optimize its daily operations, promoting a more efficient and effective educational environment.
 
-If you want to test your project locally, you can use the following commands:
+______________________________________________________________________________________________________________________________________________
 
-```bash
-# Starts the replica, running in the background
-dfx start --background
+## Benefits of Developing EduTracker Pro on the ICP Blockchain  
 
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
-```
+**Security and Transparency:**    
+- `Data Integrity:` The blockchain ensures that all student and teacher records are immutable and verifiable, preventing manipulation and fraud.  
+- `Transparency:` Transactions and data changes can be audited in real-time, ensuring transparency in academic and administrative information management.  
+  
+**Decentralization:**    
+- `Elimination of Intermediaries:` Operating on a decentralized network removes intermediaries, reducing costs and administrative complexity.  
+- `Autonomy:` The school has full control over its data and processes, without relying on centralized service providers.  
+  
+**Accessibility and Availability:**    
+- `Global Access:` Information can be accessed from anywhere in the world, allowing students and teachers to access their data at any time.  
+- `High Availability:` ICP's decentralized infrastructure ensures that the application is available 24/7 without the risk of downtime due to centralized server issues.  
+  
+**Reduced Costs:**    
+- `Reduction of Infrastructure Costs:` Using the ICP blockchain eliminates the need for expensive centralized servers and maintenance infrastructure.  
+- `Economic Transactions:` Operations on the ICP blockchain are generally more cost-effective compared to fees for centralized services.  
+  
+**Privacy and Data Control:**    
+- `Protection of Personal Data:` Sensitive data of students and teachers is encrypted and only accessible to authorized users, complying with privacy regulations.  
+- `Data Ownership:` Users have control over their personal data, managing its use and access.  
+  
+**Innovation and Future-Proofing:**    
+- `Innovative Ecosystem:` Developing on the ICP blockchain places the application within one of the most advanced and emerging technologies, facilitating the integration of future innovations.  
+- `Technological Evolution:` The ICP blockchain is designed to evolve and scale, ensuring that the application can grow and adapt to new demands without significant restructuring.  
+  
+**Trust and Credibility:**    
+- `Blockchain Reputation:` Using the ICP blockchain can increase user confidence in the integrity and security of the application.  
+- `Regulatory Compliance:` Facilitates compliance with educational and data protection regulations by providing immutable and verifiable records.  
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+**Intelligent Automation:**    
+- `Smart Contracts:` The use of smart contracts allows the automation of administrative and academic processes, such as grade recording and certificate generation, with minimal human intervention.
 
-If you have made changes to your backend canister, you can generate a new candid interface with
-
-```bash
-npm run generate
-```
-
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
-
-If you are making frontend changes, you can start a development server with
-
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
-
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
+## Summary  
+Developing EduTracker Pro on the ICP blockchain not only provides a secure, transparent, and efficient platform but also empowers educational institutions with advanced and globally accessible tools. This integration ensures that the application is prepared to face future challenges, offering a high-quality and reliable educational experience.

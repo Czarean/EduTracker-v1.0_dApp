@@ -1,4 +1,5 @@
-//I can test with this file 
+//This is a working code! 
+//Do not replace until main.mo has been confirmed working
 
 import HashMap "mo:base/HashMap";
 import Text "mo:base/Text";
